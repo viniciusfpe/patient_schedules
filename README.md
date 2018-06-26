@@ -8,13 +8,15 @@ Patient Scheduling System.
 ### Prerequisites
 
 ```
+Python 3.5
 
 ```
 
 ### Installing
 
 ```
-
+$ make install # to install dependecies, migrate models and create super user
+$ make runserver # to run project 
 ```
 
 ## Running the tests
