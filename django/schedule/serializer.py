@@ -10,4 +10,10 @@ class ScheduleSerializer(serializers.ModelSerializer):
     class Meta:
         """ Class Meta """
         model = Schedule
-        fields = '__all__'
+        fields = (
+            'id', 
+            'date', 
+            'start_time', 
+            'end_time', 
+            'patient', 
+            'procedure')
