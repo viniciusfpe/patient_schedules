@@ -7,6 +7,7 @@ from rest_framework.views import APIView
 
 from schedule.models import Schedule
 from schedule.serializer import ScheduleSerializer
+from schedule.decorator import validate_schedule_exists
 
 class ScheduleList(APIView):
     """ View for list all schedules or create a new schedule """
@@ -16,6 +17,7 @@ class ScheduleList(APIView):
         serializer = ScheduleSerializer(Schedule.objects.all(), many=True)
         return Response(serializer.data)
 
+    @validate_schedule_exists
     def post(self, request, format=None):
         """ Create a new schedule """
         serializer = ScheduleSerializer(data=request.data)
@@ -41,6 +43,7 @@ class ScheduleDetail(APIView):
         serializer = ScheduleSerializer(schedule)
         return Response(serializer.data)
 
+    @validate_schedule_exists
     def put(self, request, pk, format=None):
         """ Update a schedule """
         schedule = self.get_object_or_404(pk)
