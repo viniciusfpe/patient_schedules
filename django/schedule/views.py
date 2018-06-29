@@ -10,8 +10,6 @@ from schedule.serializer import ScheduleSerializer
 from schedule.decorator import validate_schedule_exists
 
 
-
-
 class ScheduleList(generics.ListCreateAPIView):
     """ View for list all schedules or create a new schedule """
     queryset = Schedule.objects.all()

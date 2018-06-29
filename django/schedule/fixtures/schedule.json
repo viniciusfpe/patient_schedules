@@ -1,0 +1,11 @@
+[{
+    "model": "schedule.schedule",
+    "pk": 1,
+    "fields": {
+        "date": "2018-06-30",
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "patient": "Vinicius Peixoto",
+        "procedure": "Primeira consulta"
+    }
+}]

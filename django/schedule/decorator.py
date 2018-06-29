@@ -14,6 +14,7 @@ def validate_schedule_exists(func):
 
         if Schedule.is_range_conflict(date, start, end):
             return Response(
-                'Horário não disponivel', status=status.HTTP_400_BAD_REQUEST)
+                {'detail': 'Horário não disponivel'}, 
+                status=status.HTTP_400_BAD_REQUEST)
         return func(self, request, **kwargs)
     return validate

@@ -35,6 +35,9 @@ install: requirements-pip migrate createsuperuser
 
 # test commands
 
+test:
+	coverage run --branch --source=django/  django/./manage.py test django/ -v 2
+	coverage report --omit=django/*/migrations*,django/patient_schedules/settings/*,django/patient_schedules/urls.py,django/patient_schedules/wsgi.py,django/manage.py,django//*/tests/*,django//__init__.py
 
 # dev commands
 
