@@ -19,7 +19,7 @@ class Schedule(models.Model):
             self.end_time)
     
     @classmethod
-    def is_range_conflict(cls, date, start, end):
+    def is_schedule_conflict(cls, date, start, end):
         """ Verify if schedule is conflict with other schedule """
         range_start = cls.objects.filter(
             date=date, start_time__lt=end, start_time__gt=start).exists()

@@ -9,10 +9,10 @@ def validate_schedule_exists(func):
     """ Decorator to validate if schedule date and time exist """
     def validate(self, request, **kwargs):
         date = request.data['date']
-        start = request.data['start_time']
-        end = request.data['end_time']
+        start_time = request.data['start_time']
+        end_time = request.data['end_time']
 
-        if Schedule.is_range_conflict(date, start, end):
+        if Schedule.is_schedule_conflict(date, start_time, end_time):
             return Response(
                 {'detail': 'Horário não disponivel'}, 
                 status=status.HTTP_400_BAD_REQUEST)
