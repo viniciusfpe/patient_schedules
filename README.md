@@ -15,6 +15,8 @@ Virtualenv # http://virtualenvwrapper.readthedocs.io/en/latest/
 ### Installing
 
 ```
+$ git clone https://github.com/viniciusfpe/patient_schedules.git
+$ cd patient_schedules
 $ make install # to install dependecies, migrate models and create super user
 $ make runserver # to run project 
 ```
