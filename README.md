@@ -10,8 +10,6 @@ Patient Scheduling System.
 ```
 Python 3.5
 Virtualenv # http://virtualenvwrapper.readthedocs.io/en/latest/
-
-
 ```
 
 ### Installing
