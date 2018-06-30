@@ -43,3 +43,8 @@ test:
 
 runserver: clean
 	$(DJANGO_CMD) runserver 0.0.0.0:8000 --settings=$(SETTINGS)
+
+# load test commands
+
+artillery:
+	artillery run artillery.yml
